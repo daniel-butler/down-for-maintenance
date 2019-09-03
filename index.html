@@ -84,6 +84,24 @@
 </body>
 
 <footer>
+	<script type="text/javascript">
+		var countDown = 10;
+		document.getElementById('timerConnect').innerHTML = countDown.toString();
+		document.getElementById('timerCapture').innerHTML = countDown.toString();
+		setInterval( function() {
+			countDown--;
+			document.getElementById('timerConnect').innerHTML = countDown.toString();
+			document.getElementById('timerCapture').innerHTML = countDown.toString();
+			if(countDown <= 1){
+				if(window.innerWidth > 805 ){
+					window.location.href = 'https://connect.coregroupsales.com/DocuPhase/';
+				} else {
+					window.location.href = 'https://connect.coregroupsales.com/receipts/';
+				}
+			}
+		}, 1000);
+
+	</script>
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i');
 @import url("https://use.typekit.net/phf0yra.css");
