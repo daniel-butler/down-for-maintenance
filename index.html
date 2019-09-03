@@ -97,7 +97,7 @@
 		var countDown = 10;
 		document.getElementById('timerConnect').innerHTML = countDown.toString();
 		document.getElementById('timerCapture').innerHTML = countDown.toString();
-		setInterval( function() {
+		var refreshIntervalId = setInterval( function() {
 			countDown--;
 			document.getElementById('timerConnect').innerHTML = countDown.toString();
 			document.getElementById('timerCapture').innerHTML = countDown.toString();
@@ -111,7 +111,7 @@
 			if(countDown === 0){
 				document.getElementById('timerConnect').innerHTML = countDown.toString();
 				document.getElementById('timerCapture').innerHTML = countDown.toString();
-
+				clearInterval(refreshIntervalId);
 			}
 		}, 1000);
 
