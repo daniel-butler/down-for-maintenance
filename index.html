@@ -109,9 +109,7 @@
 				}
 			}
 			if(countDown === 0){
-				document.getElementById('timerConnect').innerHTML = countDown.toString();
-				document.getElementById('timerCapture').innerHTML = countDown.toString();
-				clearInterval(refreshIntervalId);
+				clearInterval(refreshIntervalId);  //stop timer
 			}
 		}, 1000);
 
