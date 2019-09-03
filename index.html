@@ -101,12 +101,17 @@
 			countDown--;
 			document.getElementById('timerConnect').innerHTML = countDown.toString();
 			document.getElementById('timerCapture').innerHTML = countDown.toString();
-			if(countDown <= 1){
+			if(countDown === 1){
 				if(window.innerWidth > 805 ){
 					window.location.href = 'https://connect.coregroupsales.com/DocuPhase/';
 				} else {
 					window.location.href = 'https://connect.coregroupsales.com/receipts/';
 				}
+			}
+			if(countDown === 0){
+				document.getElementById('timerConnect').innerHTML = countDown.toString();
+				document.getElementById('timerCapture').innerHTML = countDown.toString();
+
 			}
 		}, 1000);
 
